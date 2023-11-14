@@ -1,0 +1,104 @@
+deploy_date,deploy_time,download_date,download_time,download_group,name,letter_name,name_order,sn,wp_name,lat,long,depth_m,battery_date,basin,local
+30-Aug-17,,5-Jul-18,,1,1,O,9,109389,1_a,45.81525,-74.7711,22,20-Aug-17,East Basin,Indian Isl N Shallows
+30-Aug-17,,5-Jul-18,,1,2,V,2,132374,2_a,45.78528,-74.7469,42,20-Aug-17,East Basin,NFGC directly in front of white/blue cabin
+30-Aug-17,,7-Jul-18,,1,3,R,6,109388,3_a,45.80708,-74.7569,44,20-Aug-17,East Basin,Near Clear Lake
+30-Aug-17,,5-Jul-18,,1,4,U,3,132367,4_a,45.79751,-74.7559,20,20-Aug-17,East Basin,220m N of Blueberry Island
+30-Aug-17,,4-Jul-18,,1,5,I,15,132365,5_a,45.81656,-74.7804,25,20-Aug-17,West Basin,Off point of Pat Johnson's Island
+30-Aug-17,,4-Jul-18,,1,6,J,14,109369,6_a,45.81088,-74.7831,18,20-Aug-17,West Basin,Narrows to Margaret Bay
+30-Aug-17,,4-Jul-18,,1,7,G,17,109374,7_a,45.82035,-74.7903,18,20-Aug-17,West Basin,Behind Pine and Cypress Islands
+30-Aug-17,,7-Jul-18,,1,8,F,18,132372,8_a,45.83037,-74.7797,15,20-Aug-17,West Basin,In front of McKinnon's house
+30-Aug-17,,5-Jul-18,,1,9,M,11,109383,9_a,45.83012,-74.7673,15,20-Aug-17,East Basin,In front of Dio Gardi House
+30-Aug-17,,5-Jul-18,,1,10,N,10,132370,10_a,45.82203,-74.7622,30,20-Aug-17,East Basin,NE of front of Levesque
+30-Aug-17,,5-Jul-18,,1,11,P,8,132366,11_a,45.81252,-74.7596,64,20-Aug-17,East Basin,Middle of Big Lake
+30-Aug-17,,5-Jul-18,,1,12,T,4,132369,12_a,45.79768,-74.7661,10,20-Aug-17,East Basin,Entrance of Black Bay
+31-Aug-17,,6-Jul-18,,1,13,A,23,132371,13_a,45.84439,-74.7693,47,20-Aug-17,North Basin,Hamilton Bay between islands
+31-Aug-17,,6-Jul-18,,1,14,B,22,132375,14_a,45.85014,-74.7689,38,20-Aug-17,North Basin,Entrance of Bay with Harper Dock
+31-Aug-17,,7-Jul-18,,1,15,C,21,132373,15_a,45.85742,-74.7778,21,20-Aug-17,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+31-Aug-17,,7-Jul-18,,1,16,D,20,132364,16_a,45.84565,-74.7792,15,20-Aug-17,North Basin,West of Hidden Bay off island
+31-Aug-17,,4-Jul-18,,1,17,E,19,132368,17_a,45.83631,-74.7771,24,20-Aug-17,West Basin,Off the point at Cedar Chalet
+7-Jul-18,,20-Jul-18,,2,3,R,6,109388,3_b,45.807044,-74.756964,44,7-Jul-18,East Basin,Near Clear Lake
+4-Jul-18,,20-Jul-18,,2,5,I,15,132365,5_b,45.81654259,-74.78039595,25,4-Jul-18,West Basin,Off point of Pat Johnson's Island
+7-Jul-18,,20-Jul-18,,2,15,C,21,132373,15_b,45.857308,-74.778039,21,7-Jul-18,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+5-Jul-18,,1-Jul-19,,3,1,O,9,109389,1_c,45.81531753,-74.77115717,22,5-Jul-18,East Basin,Indian Isl N Shallows
+5-Jul-18,,1-Jul-19,,3,2,V,2,132374,2_c,45.78532779,-74.74691947,42,5-Jul-18,East Basin,NFGC directly in front of white/blue cabin
+20-Jul-18,,2-Jul-19,,3,3,R,6,109388,3_c,45.8070772,-74.75702117,44,7-Jul-18,East Basin,Near Clear Lake
+5-Jul-18,,4-Jul-19,,3,4,U,3,132367,4_c,45.79756524,-74.75584427,20,5-Jul-18,East Basin,220m N of Blueberry Island
+20-Jul-18,,2-Jul-19,,3,5,I,15,132365,5_c,45.81647951,-74.78032054,25,4-Jul-18,West Basin,Off point of Pat Johnson's Island
+4-Jul-18,,3-Jul-19,,3,6,J,14,109369,6_c,45.81089557,-74.78317439,18,4-Jul-18,West Basin,Narrows to Margaret Bay
+4-Jul-18,,3-Jul-19,,3,7,G,17,109374,7_c,45.82046808,-74.79028719,18,4-Jul-18,West Basin,Behind Pine and Cypress Islands
+7-Jul-18,,5-Jul-19,,3,8,F,18,132372,8_c,45.830426,-74.779732,15,7-Jul-18,West Basin,In front of McKinnon's house
+5-Jul-18,,5-Jul-19,,3,9,M,11,109383,9_c,45.83017764,-74.76745589,15,5-Jul-18,East Basin,In front of Dio Gardi House
+5-Jul-18,,7-Jul-19,,3,10,N,10,132370,10_c,45.82208809,-74.76230621,30,5-Jul-18,East Basin,NE of front of Levesque
+5-Jul-18,,1-Jul-19,,3,11,P,8,132366,11_c,45.81256196,-74.75956042,64,5-Jul-18,East Basin,Middle of Big Lake
+5-Jul-18,,4-Jul-19,,3,12,T,4,132369,12_c,45.79769734,-74.7661696,10,5-Jul-18,East Basin,Entrance of Black Bay
+6-Jul-18,,2-Jul-19,,3,13,A,23,132371,13_c,45.84437905,-74.7691549,47,6-Jul-18,North Basin,Hamilton Bay between islands
+6-Jul-18,,4-Jul-19,,3,14,B,22,132375,14_c,45.85021705,-74.76854503,38,6-Jul-18,North Basin,Entrance of Bay with Harper Dock
+20-Jul-18,,3-Jul-19,,3,15,C,21,132373,15_c,45.85731392,-74.77803603,21,7-Jul-18,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+7-Jul-18,,7-Jul-19,,3,16,D,20,132364,16_c,45.845737,-74.779197,15,7-Jul-18,North Basin,West of Hidden Bay off island
+4-Jul-18,,2-Jul-19,,3,17,E,19,132368,17_c,45.83633427,-74.77707655,24,4-Jul-18,West Basin,Off the point at Cedar Chalet
+5-Jul-18,,1-Jul-19,,3,18,W,1,133569,18_a,45.778149,-74.741308,45,5-Jul-18,East Basin,beside ferry line closer to NE little islands
+5-Jul-18,,1-Jul-19,,3,19,Q,7,133571,19_a,45.80826441,-74.76760232,15,6-Jul-18,East Basin,"Presquile bay, half between litt rock and island"
+5-Jul-18,,3-Jul-19,,3,20,H,16,133570,20_a,45.81096816,-74.7919572,10,7-Jul-18,West Basin,Between long isldand and osprey nest island  or fisher island and hemlock bay. 
+20-Jul-18,,30-Jun-19,,3,21,K,13,133568,21_a,45.80326988,-74.78734958,10,20-Jul-18,West Basin,Just inside Monaco Bay
+14-Jun-19,,30-Jun-19,,3,22,L,12,109380,22_a,45.79887065,-74.78607759,5,14-Jun-19,West Basin,In front of Mills close to mills dock
+2-Jul-19,,20-Sep-19,,4,3,R,6,109388,3_d,45.80709673,-74.75704551,44,2-Jul-19,East Basin,Near Clear Lake
+2-Jul-19,,20-Sep-19,,4,5,I,15,132365,5_d,45.81649848,-74.78036319,25,2-Jul-19,West Basin,Off point of Pat Johnson's Island
+3-Jul-19,,20-Sep-19,,4,15,C,21,132373,15_d,45.85732902,-74.77801853,21,3-Jul-19,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+20-Sep-19,,23-Sep-19,,5,5,I,15,132365,5_e,45.81653674,-74.7803262,25,2-Jul-19,West Basin,Off point of Pat Johnson's Island
+20-Sep-19,,23-Sep-19,,5,15,C,21,132373,15_e,45.85732021,-74.77802847,21,3-Jul-19,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+1-Jul-19,,16-Oct-19,,6,1,O,9,109389,1_c,45.81529579,-74.77112131,22,1-Jul-19,East Basin,Indian Isl N Shallows
+30-Jun-19,,6-Nov-19,,7,22,L,12,109380,22_b,45.7988263,-74.78607857,5,14-Jun-19,West Basin,In front of Mills close to mills dock
+16-Oct-19,,26-Jun-20,,8,1,O,9,109389,1_e,45.81525,-74.77117,22,26-Jun-20,East Basin,Indian Isl N Shallows
+1-Jul-19,,2-Jul-20,,8,2,V,2,132374,2_d,45.78524408,-74.74691154,42,2-Jul-20,East Basin,NFGC directly in front of white/blue cabin
+20-Sep-19,,30-Jun-20,,8,3,R,6,109388,3_f,45.80700558,-74.75710598,44,30-Jun-20,East Basin,Near Clear Lake
+4-Jul-19,,21-Jun-20,,8,4,U,3,132367,4_d,45.79749628,-74.75593269,20,21-Jun-20,East Basin,220m N of Blueberry Island
+23-Sep-19,,30-Jun-20,,8,5,I,15,132365,5_f,45.81656775,-74.78041545,25,30-Jun-20,West Basin,Off point of Pat Johnson's Island
+3-Jul-19,,25-Jun-20,,8,6,J,14,109369,6_d,45.81089195,-74.78306895,18,25-Jun-20,West Basin,Narrows to Margaret Bay
+3-Jul-19,,20-Jun-20,,8,7,G,17,109374,7_d,45.82044668,-74.79038429,18,20-Jun-20,West Basin,Behind Pine and Cypress Islands
+5-Jul-19,,26-Jun-20,,8,8,F,18,132372,8_d,45.83032622,-74.77972048,15,26-Jun-20,West Basin,In front of McKinnon's house
+5-Jul-19,,26-Jun-20,,8,9,M,11,109383,9_d,45.83006772,-74.76731955,15,26-Jun-20,East Basin,In front of Dio Gardi House
+7-Jul-19,,21-Jun-20,,8,10,N,10,132370,10_d,45.82207605,-74.76226521,30,21-Jun-20,East Basin,NE of front of Levesque
+1-Jul-19,,3-Jul-20,,8,11,P,8,132366,11_d,45.81256196,-74.75956042,64,3-Jul-20,East Basin,Middle of Big Lake
+4-Jul-19,,21-Jun-20,,8,12,T,4,132369,12_d,45.79768235,-74.76611364,10,21-Jun-20,East Basin,Entrance of Black Bay
+2-Jul-19,,2-Jul-20,,8,13,A,23,132371,13_d,45.84440245,-74.7693269,47,2-Jul-20,North Basin,Hamilton Bay between islands
+4-Jul-19,,3-Jul-20,,8,14,B,22,132375,14_d,45.85002107,-74.76880662,38,3-Jul-20,North Basin,Entrance of Bay with Harper Dock
+23-Sep-19,,29-Jun-20,,8,15,C,21,132373,15_f,45.85731306,-74.77801888,21,29-Jun-20,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+7-Jul-19,,29-Jun-20,,8,16,D,20,132364,16_d,45.84563164,-74.77916032,15,29-Jun-20,North Basin,West of Hidden Bay off island
+2-Jul-19,,29-Jun-20,,8,17,E,19,132368,17_d,45.83629433,-74.77708259,24,29-Jun-20,West Basin,Off the point at Cedar Chalet
+1-Jul-19,,21-Jun-20,,8,18,W,1,133569,18_b,45.77812917,-74.74127823,45,21-Jun-20,East Basin,beside ferry line closer to NE little islands
+1-Jul-19,,21-Jun-20,,8,19,Q,7,133571,19_b,45.80820556,-74.76767983,15,21-Jun-20,East Basin,"Presquile bay, half between litt rock and island"
+3-Jul-19,,20-Jun-20,,8,20,H,16,133570,20_b,45.81096715,-74.79186825,10,20-Jun-20,West Basin,Between long isldand and osprey nest island  or fisher island and hemlock bay. 
+30-Jun-19,,24-Jun-20,,8,21,K,13,133568,21_b,45.80328492,-74.78732824,10,24-Jun-20,West Basin,Just inside Monaco Bay
+6-Nov-19,,21-Jun-20,,8,23,S,5,109380,23_a,45.803265,-74.76571,5,21-Jun-20,East Basin,West side of big shore soal 
+30-Jun-20,,9/25/2020 20:23,,9,3,R,6,109388,3_g,45.80709,-74.75706,44,30-Jun-20,East Basin,Near Clear Lake
+30-Jun-20,,9/25/2020 18:02,,9,5,I,15,132365,5_g,45.81648203,-74.78032861,25,30-Jun-20,West Basin,Off point of Pat Johnson's Island
+29-Jun-20,,9/25/2020 19:09,,9,15,C,21,132373,15_g,45.85729976,-74.77800411,21,29-Jun-20,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+25-Jun-20,,10/17/2020 14:00,,10,6,J,14,109369,6_e,45.81095787,-74.78320008,18,25-Jun-20,West Basin,Narrows to Margaret Bay
+26-Jun-20,,10/17/2020 14:23,,10,9,M,11,109383,9_e,45.83026306,-74.76744935,15,26-Jun-20,East Basin,In front of Dio Gardi House
+21-Jun-20,,10/17/2020 15:11,,10,10,N,10,132370,10_e,45.822105,-74.76227,30,21-Jun-20,East Basin,NE of front of Levesque
+3-Jul-20,,10/17/2020 15:38,,10,11,P,8,132366,11_f,45.81248302,-74.75946866,64,3-Jul-20,East Basin,Middle of Big Lake
+21-Jun-20,,10/18/2020 10:52,,10,19,Q,7,133571,19_c,45.80827635,-74.76780464,15,21-Jun-20,East Basin,"Presquile bay, half between litt rock and island"
+21-Jun-20,,10/14/2020 11:25,,10,23,S,5,109380,23_b,45.80324289,-74.7657308,5,21-Jun-20,East Basin,West side of big shore soal 
+26-Jun-20,,14-Jul-21,,11,1,O,9,109389,1_f,45.8152804,-74.77124078,22,26-Jun-20,East Basin,Indian Isl N Shallows
+2-Jul-20,,14-Jul-21,,11,2,V,2,132374,2_e,45.78532549,-74.74691503,42,2-Jul-20,East Basin,NFGC directly in front of white/blue cabin
+9/25/2020 20:23,,22-Jul-21,,11,3,R,6,109388,3_g,45.80702215,-74.75699955,44,30-Jun-20,East Basin,Near Clear Lake
+21-Jun-20,,14-Jul-21,,11,4,U,3,132367,4_e,45.79747755,-74.75593961,20,21-Jun-20,East Basin,220m N of Blueberry Island
+9/25/2020 18:02,,22-Jul-21,,11,5,I,15,132365,5_g,45.8164786,-74.78028196,25,30-Jun-20,West Basin,Off point of Pat Johnson's Island
+10/17/2020 14:00,,14-Jul-21,,11,6,J,14,109369,6_e,45.81090385,-74.78317902,18,25-Jun-20,West Basin,Narrows to Margaret Bay
+20-Jun-20,,14-Jul-21,,11,7,G,17,109374,7_e,45.82048527,-74.79028278,18,20-Jun-20,West Basin,Behind Pine and Cypress Islands
+26-Jun-20,,14-Jul-21,,11,8,F,18,132372,8_e,45.83038442,-74.77976676,15,26-Jun-20,West Basin,In front of McKinnon's house
+10/17/2020 14:23,,14-Jul-21,,11,9,M,11,109383,9_e,45.83023567,-74.76747316,15,26-Jun-20,East Basin,In front of Dio Gardi House
+10/17/2020 15:11,,14-Jul-21,,11,10,N,10,132370,10_e,45.82200907,-74.76228359,30,21-Jun-20,East Basin,NE of front of Levesque
+10/17/2020 15:38,,14-Jul-21,,11,11,P,8,132366,11_f,45.81249547,-74.75939428,64,3-Jul-20,East Basin,Middle of Big Lake
+21-Jun-20,,14-Jul-21,,11,12,T,4,132369,12_e,45.79768087,-74.7661919,10,21-Jun-20,East Basin,Entrance of Black Bay
+2-Jul-20,,15-Jul-21,,11,13,A,23,132371,13_e,45.84437225,-74.76920605,47,2-Jul-20,North Basin,Hamilton Bay between islands
+3-Jul-20,,15-Jul-21,,11,14,B,22,132375,14_e,45.85013,-74.76883,38,3-Jul-20,North Basin,Entrance of Bay with Harper Dock
+9/25/2020 19:09,,22-Jul-21,,11,15,C,21,132373,15_g,45.85729425,-74.77798111,21,29-Jun-20,North Basin,Bay Maskinonge in front of wood cabin (across from pond)
+29-Jun-20,,15-Jul-21,,11,17,E,19,132368,17_e,45.83634388,-74.77711294,24,29-Jun-20,West Basin,Off the point at Cedar Chalet
+21-Jun-20,,14-Jul-21,,11,18,W,1,133569,18_c,45.77817264,-74.74135318,45,21-Jun-20,East Basin,beside ferry line closer to NE little islands
+10/18/2020 10:52,,14-Jul-21,,11,19,Q,7,133571,19_c,45.80836094,-74.76786182,15,21-Jun-20,East Basin,"Presquile bay, half between litt rock and island"
+20-Jun-20,,13-Jul-21,,11,20,H,16,133570,20_c,45.81094947,-74.79196672,10,20-Jun-20,West Basin,Between long isldand and osprey nest island  or fisher island and hemlock bay. 
+24-Jun-20,,13-Jul-21,,11,21,K,13,133568,21_c,45.80327719,-74.78719515,10,24-Jun-20,West Basin,Just inside Monaco Bay
+5-Jul-18,,1-Jul-19,,error,11,P,8,132366,11_e_error,45.81125333,-74.7593847,64,5-Jul-18,East Basin,Middle of Big Lake
+29-Jun-20,,15-Jul-21,,11,16,D,20,132364,16_e,45.84562,-74.77922,15,29-Jun-20,North Basin,West of Hidden Bay off island
+10/14/2020 11:25,,15-Jul-21,,11,23,S,5,109380,23_b,45.80311,-74.76561,5,21-Jun-20,East Basin,West side of big shore soal 
