@@ -10,6 +10,8 @@ This repository is where I store example work-flows to do different data
 cleaning operations (e.g., adding metadata, removing false detections,
 creating preliminary abacus plots) for acoustic telemetry data.
 
+# Installation
+
 To get this repo and the example workflows you can download it in R
 using the following code and prompts:
 
@@ -18,4 +20,17 @@ install.packages("usethis")
 usethis::use_course("https://github.com/benjaminhlina/telemetry-workflows/archive/refs/heads/master.zip"
 ```
 
-Once installed click on the folder R to find the selected scripts
+Once installed click on the folder R to find the selected scripts.
+
+# Questions and Contriubtions
+
+If you have question about how to do something you want with telemetry
+data but are unsure and you would like help. Please submit an
+[issue](https://github.com/benjaminhlina/telemetry-workflows/issues) as
+a [reprex](https://reprex.tidyverse.org/) marked with an enhancement tag
+to help me, help you. I will not attempt to answer questions that do not
+use a reprex, as it makes it difficult to troubleshoot what you’re
+needing help with. If you have code you’d like to contribute to this,
+please fork this repository and create a [pull
+request](https://github.com/benjaminhlina/telemetry-workflows/pulls).
+Thanks!
