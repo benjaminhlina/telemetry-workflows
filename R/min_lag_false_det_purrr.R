@@ -14,64 +14,13 @@
 
 # bring in detection csv exported by VUE or Fathom ---- 
 
-# suggested file path belwo 
+# suggested file path below, rename your rds
 
-det <- read_csv(here("Data", 
-                     "Telemetry Downloads", 
-                     "YOUR_FILE_NAME_01_DATE.csv"))
+det <- read_rds(here("Saved Data", 
+                     "Cleaned Telemetry Data", 
+                     "cleaned_telemetry_file.rds"))
 
-
-# add in column that is transmitter code space ----- 
-
-dat$transmitter_codespace <- dat$transmitter_id
-
-glimpse(dat)
-
-
-
-# remove dashes from both receiver and trasmitter columns ----
-dat$receiver <- dat$receiver_sn %>% 
-  str_replace(".*-", "")
-
-dat$transmitter <- dat$transmitter_id %>% 
-  str_replace(".*-", "")
-
-glimpse(dat)
-
-
-
-# if else statment to properly get codespaces -----
-# first create vector of the length of each string to test against 
-
-
-unique(det$transmitter_codespace)
-
-cs_lgth <- str_length(det$transmitter_codespace)
-unique(cs_lgth)
-# you need to see if the length of the code spaces differed for instance it could
-# be A69-9002-10683. The codespace is A69-9002. We need to drop the tag ID from
-# the codespace column. To do so we first neeed to determine the length of the 
-# string for each each full transmition. then we need to remove the last characters
-# prior to the last dash and the dash. In the below example it was 5 or 6 
-# characters...I am not sure what your's will be but you will need to change 
-# 13 to the correct length of cs_lenght. If you have more than 2 cs_lgths, 
-# we can write a case_when statement to do this. Depending on the number 
-# of characters you need to remove, change 5 and 6 below. 
-
-# use if_else to have it search for when the length of the code space
-# equals 13 characters and have it remove those last 6 characters 
-# then if it equals 13 have it only remove the last 5 characters 
-# 
-
-det <- det %>% 
-  mutate(
-    transmitter_codespace = if_else(cs_lgth %in% 13,  
-                                    det$transmitter_codespace %>%
-                                      str_replace(".{5}$", ""), 
-                                    det$transmitter_codespace %>%
-                                      str_replace(".{6}$", ""))
-  )
-
+glimpse(det)
 
 # next we need to do a few things to run min_lag, first min_lag needs to be 
 # run for each fish, second we need the mean_delay from those tags as a column
