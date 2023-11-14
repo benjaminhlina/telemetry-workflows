@@ -17,3 +17,5 @@ using the following code and prompts:
 install.packages("usethis")
 usethis::use_course("https://github.com/benjaminhlina/telemetry-workflows/archive/refs/heads/master.zip"
 ```
+
+Once installed click on the folder R to find the selected scripts
