@@ -36,11 +36,8 @@ dat <- map_df(file.list, read_csv, .id = "id") %>%
 # view data after import 
 glimpse(dat)
 
-dat
-# ---- Check that download group is unique convert id/download group to numeric -----
-unique(dat$id)
-dat$id  <- as.numeric(dat$id)
-
+dat %>% 
+  arrange(date_and_time_utc)
 # ---- Drop blank columns -----
 
 dat <- dat %>% 
