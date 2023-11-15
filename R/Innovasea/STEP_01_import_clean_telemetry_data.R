@@ -92,7 +92,7 @@ lt_tagged <- lt_tagged %>%
 # ---- Filter out detections so only LKT are present ------
 
 dat <- dat %>% 
-  arrange(date_and_time_utc)
+  arrange(detection_timestamp_utc)
 
 dat$transmitter_serial <- as.character(dat$transmitter_serial) 
 
