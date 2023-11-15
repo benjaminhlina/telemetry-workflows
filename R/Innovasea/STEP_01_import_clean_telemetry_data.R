@@ -155,11 +155,68 @@ dat <- dat %>%
     )
 
 
-# ---- join receiver metadata --------
-# ---- join fish metadata -------- 
 
+# ---- join receiver metadata --------
+# we need to add the receiver locations, and lat and lon 
+# We need to join by the file ID (each download will have a different lat lon)
+# for the same receiver as the deployment lat and lon will shift ever so slight
+# We will take the average of the lat and lon. We will match up downlaod_group 
+# with ID and the receiver serial number 
+#
+# NOTE: if you do not have multiple gps points for each time you downloaded and 
+# deployed the receiver then just line up by serial number of the receiver
+
+glimpse(dat)
+glimpse(rl)
+
+
+dat <- dat %>% 
+  left_join(rl, by = c("id" = "download_group", "receiver_sn" = "sn"))
+
+glimpse(dat)
+# congrats we now have the lat and lon of each receiver download lined up 
+
+# ---- take the mean lat and lon of the receiver ----
+# if you did not take multiple gps points for each time you downloaded and 
+# deployed the receiver then you can skip this part 
+
+dat <- dat %>% 
+  group_by(receiver_sn) %>% 
+  mutate(
+    lon_mean = mean(long, na.rm = TRUE),
+    lat_mean = mean(lat, na.rm = TRUE)
+  ) %>% 
+  ungroup()
+
+glimpse(dat)
+
+# ---- join fish metadata -------- 
+# We now are going to join the fish metadata by trasmitter serial number 
+# Going forward we will not refer to the fish by the transmitter serial number 
+# but instead by its floy_tag number
+
+glimpse(dat)
+
+# we only need specific columns from lt_tagged 
+
+lt_tagged <- lt_tagged %>% 
+  dplyr::select(floy_tag, tag_date, species, basin, latitude, longitude, 
+                tl, fl, girth, weight, sex, scales, fin, vemco_tag:transmitter_serial, 
+                comments) %>% 
+  mutate(
+    transmitter_serial = as.character(transmitter_serial) # we will convert to 
+    # transmitter_serial in detection data frame 
+  ) %>% 
+  rename(fish_basin = basin)
+
+# now we join our detection dataframe with our fish metadata
+dat <- dat %>% 
+  left_join(lt_tagged, by = "transmitter_serial")
+
+glimpse(dat)
+
+# ----- CONGRATULATIONS! now detection data can move tp the next SCRIPT once saved
 # ---- Once Clean export data -----
 write_rds(dat, here("Saved-Data", 
-                    "Innovasea",
-                    "Cleaned-Telemetry-Data", 
+                    "Innovasea-Cleaned-Telemetry-Data", 
                     "cleaned_telemetry_file.rds"))
