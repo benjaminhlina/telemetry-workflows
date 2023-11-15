@@ -12,7 +12,7 @@ creating preliminary abacus plots) for acoustic telemetry data. These
 workflows are meant to be used with telemetry data that doesn’t go
 through [Ocean Tracking Network
 (OTN)](https://oceantrackingnetwork.org/) or affiliates (e.g., [Great
-Lakes Acoustic Telemetry Obseravation System
+Lakes Acoustic Telemetry Observation System
 (GLATOS)](https://glatos.glos.us/)), QAQC protocols. If one wants to use
 any of the scripts regardless of the data QAQC that has been done,
 select the company your transmitters and receivers are from in the R
