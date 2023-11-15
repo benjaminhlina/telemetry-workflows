@@ -85,4 +85,5 @@ dat <- dat %>%
 # ---- write rds ---- 
 
 write_rds(dat, here("saved-data", 
-                    "Lotek-cleaned_telemetry-data.rds"))
+                    "Lotek-cleaned_telemetry-data", 
+                    "lotek_cleaned_telemetry_file.rds"))
