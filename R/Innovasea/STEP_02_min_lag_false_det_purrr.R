@@ -1,4 +1,4 @@
-# load packages ----
+# ---- load packages ----
 {
   library(dplyr)
   library(ggplot2)
@@ -12,16 +12,18 @@
   
 }
 
-# bring in detection csv exported by VUE or Fathom ---- 
+# ---- bring in detection csv exported by VUE or Fathom ---- 
 
 # suggested file path below, rename your rds
 
-det <- read_rds(here("Saved Data", 
-                     "Cleaned Telemetry Data", 
+det <- read_rds(here("saved-data", 
+                     "Innovasea-cleaned-telemetry-data", 
                      "cleaned_telemetry_file.rds"))
 
 glimpse(det)
 
+
+# ---- RUN min_lag() -----
 # next we need to do a few things to run min_lag, first min_lag needs to be 
 # run for each fish, second we need the mean_delay from those tags as a column
 # prior to running min lag you need to have joined all the metadata for the fish
