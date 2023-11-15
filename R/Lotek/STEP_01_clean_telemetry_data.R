@@ -82,3 +82,7 @@ dat <- dat %>%
 )
 #this column is the real day time
 
+# ---- write rds ---- 
+
+write_rds(dat, here("saved-data", 
+                    "Lotek-cleaned_telemetry-data.rds"))
