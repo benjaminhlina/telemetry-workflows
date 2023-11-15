@@ -56,7 +56,14 @@ rl <- read_csv(here::here("Data",
                           "receiver_metadata.csv")) %>%
   clean_names()
 
-glimpse(rl)
+glimpse(rl) 
+
+# convert serial number of receiver to character to properly line up data 
+rl <- rl %>% 
+  mutate(
+    sn = as.character(sn)
+  )
+
 
 # ---- Bring in metadata for tagged fish -----
 fish_tag_data <- read_csv(here::here("data", 
