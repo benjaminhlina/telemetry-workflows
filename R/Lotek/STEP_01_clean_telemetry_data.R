@@ -27,51 +27,58 @@
 #pattern = "*.csv",
 #full.names = TRUE
 
-# use map_df function from purrr to  perform a for loop to import and combine into a single dataframe
+# use map_dat function from purrr to  perform a for loop to import and combine into a single dataframe
 # only needed when you need an id-column with the file-names 
-#df <- map_df(file.list, read_csv,
+#dat <- map_dat(file.list, read_csv,
 #col_names = TRUE, .id = "id") %>% 
 #mutate(
 #id = str_replace(id, "./filtered csv files/spring 2023/", ""), 
 #id = str_replace(id, ".csv", "")
 #) %>% 
 #janitor::clean_names()
-#str(df)
+#str(dat)
 
 # suppper fast load !!! 
-tbl <-
-  list.files(path = "./filtered csv files/spring 2023",
-             pattern = "*.csv", 
-             full.names = TRUE) %>% 
+dat <- list.files(path = "./data/Lotek/filtered-csv-from-WSH-host-lotek",
+                  pattern = "*.csv", 
+                  full.names = TRUE) %>% 
   map_df(~read_csv(., col_types = cols(.default = "c"), id = "id")) %>% 
   mutate(
-    id = str_replace(id, "./filtered csv files/spring 2023/", ""), 
+    id = str_replace(id, "./data/Lotek/filtered-csv-from-WSH-host-lotek/", ""), 
     id = str_replace(id, ".csv", "")
   ) %>%
   janitor::clean_names()
 
-tbl
-df <- tbl
-rm(tbl)
+dat
 # view data after import ----
-glimpse(df) #fraction of a second, power of transmission signal
+glimpse(dat) #fraction of a second, power of transmission signal
 
-#convert df from raw Julian to posixct ----
-df$time <- as.numeric(df$time)
+#convert dat from raw Julian to posixct ----
+dat<- dat %>% 
+  mutate(
+    time = as.numeric(time)
+  )
 
-df$time <- chron(df$time, origin = c(month = 1, day = 0, year = 1900),
+dat <- dat %>% 
+  mutate(
+    time = chron(time, origin = c(month = 1, day = 0, year = 1900),
                  format = c(dates = "y-m-d", times = "h:m:s")) %>%
-  as.character() %>% 
-  str_replace("[(\\)]", "") %>%
-  str_replace(".{1}$", "") %>%
-  ymd_hms()
+      as.character() %>% 
+      str_replace("[(\\)]", "") %>%
+      str_replace(".{1}$", "") %>%
+      ymd_hms()
+  )
 
-names(df)[names(df) == "time"] <- "date_time" #rename
+names(dat)[names(dat) == "time"] <- "date_time" #rename
 
-glimpse(df) #look at data again to see what format everything is in 
+glimpse(dat) #look at data again to see what format everything is in 
 #and check the time and date are now in POSIX (dttm)
 #date_time is correct EXCEPT it is 24 hours ahead of 
 #when the detection truly occurred
 #need to create a new column with the correct times
-df$date_time_24hr <- (df$date_time - 86400) #this column is the real day time
-View(df)
+dat <- dat %>% 
+  mutate(
+    date_time_24hr = date_time - 86400
+)
+#this column is the real day time
+
