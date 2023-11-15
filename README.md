@@ -18,6 +18,9 @@ any of the scripts regardless of the data QAQC that has been done,
 select the company your transmitters and receivers are from in the R
 folder and choose what step you are wanting help with.
 
+NOTE: Currently Lotek files are under develop and are limitted this will
+be fixed in the comming weeks.
+
 # Installation
 
 To get this repo and the example workflows you can download it in R
