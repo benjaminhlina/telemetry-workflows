@@ -43,23 +43,36 @@ det <- det %>%
   bind_rows(.id = "floy_tag") %>% # then rejoin the list into a dataframe by floy_gag
   ungroup() # lastly ungroup the dataframe
 
+glimpse(det)
+
+# ---- Run false_detection -----
 # next we need to run false detection 
-# same proceedures above except one little change to our map call 
+# same procedures above except one little change to our map call 
 # we will use false_detections, this will put a 0-1 and create the column 
 # passed_filter, 0 is a false detection. We also need to multiple the mean_delay
-# by 30 for the tf argument as this might change between tags. This is 
-# for instance this is mean_dealy (120 s * 30 = 3600)
+# or max_delay by 30 for the tf argument as this might change between tags. This is 
+# for instance this is mean_delay (120 s * 30 = 3600)
 det <- det %>% 
   group_by(floy_tag) %>% 
   arrange(detection_timestamp_utc) %>% 
   split(.$floy_tag) %>% 
-  map(~ false_detections(det = .x, tf = mean_delay * 30)) %>% 
+  map(~ false_detections(det = .x, tf = .x$max_delay * 30)) %>% 
   bind_rows(.id = "floy_tag") %>% 
   ungroup()
 
 
-det
+glimpse(det)
 
-# now we can remove false detections 
+# ---- now we can remove false detections -----
 det <- det %>% 
-  filter(passed_filter %in% 1)
+  filter(passed_filter %in% 1) %>% 
+  arrange(detection_timestamp_utc)
+
+glimpse(det)
+
+
+# ---- Now that we have removed false detections we can move to the next step ----
+
+write_rds(det, here::here("Saved-Data", 
+                          "Innovasea-cleaned-telemetry-data", 
+                          "false_detection_cleaned_telemetry_data.rds"))
