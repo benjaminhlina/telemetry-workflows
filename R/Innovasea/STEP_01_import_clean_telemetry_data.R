@@ -1,4 +1,4 @@
-# load packages ----
+# ---- Load packages ----
 {
   library(dplyr)
   library(ggplot2)
@@ -13,13 +13,14 @@
   
 }
 
-# ---- bring in downloaded data exported from VUE ----
+# ---- Bring in downloaded data exported from VUE ----
 # these files will often be quite large but for the purpose of this tutorial
 # I've sampled the first 100 detections for each receiver for each download 
 
 
 # grab entire file list from folder
-file.list <- list.files(here::here("Data", 
+file.list <- list.files(here::here("Data",
+                                   "Innovasea",
                                    "Vue or Fathom exports"), 
                         full.names = TRUE,
 )
