@@ -18,7 +18,7 @@ any of the scripts regardless of the data QAQC that has been done,
 select the company your transmitters and receivers are from in the R
 folder and choose what step you are wanting help with.
 
-NOTE: Currently Lotek files are under develop and are limitted this will
+NOTE: Currently Lotek files are under develop and are limited this will
 be fixed in the coming weeks.
 
 # Installation

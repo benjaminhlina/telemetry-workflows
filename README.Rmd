@@ -19,13 +19,13 @@ knitr::opts_chunk$set(
 This repository is where I store example work-flows to do different data cleaning
 operations (e.g., adding metadata, removing false detections, creating preliminary abacus plots) for acoustic telemetry data. These workflows are meant to be used with telemetry data that doesn't go through [Ocean Tracking Network (OTN)](https://oceantrackingnetwork.org/) or affiliates (e.g., [Great Lakes Acoustic Telemetry Obseravation System (GLATOS)](https://glatos.glos.us/)), QAQC protocols. If one wants to use any of the scripts regardless of the data QAQC that has been done, select the company your transmitters and receivers are from in the R folder and choose what step you are wanting help with. 
 
-NOTE: Currently Lotek files are under develop and are limitted this will be fixed in the comming weeks. 
+NOTE: Currently Lotek files are under develop and are limited this will be fixed in the coming weeks. 
 
 # Installation 
 To get this repo and the example workflows you can download it in R using the following code and prompts:
 ```{r download project, eval=FALSE}
 install.packages("usethis")
-usethis::use_course("https://github.com/benjaminhlina/telemetry-workflows/archive/refs/heads/master.zip"
+usethis::use_course("https://github.com/benjaminhlina/telemetry-workflows/archive/refs/heads/master.zip")
 ```
 
 Once installed click on the folder R to find the selected scripts. 
