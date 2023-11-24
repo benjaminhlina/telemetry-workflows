@@ -8,18 +8,22 @@
 
 This repository is where I store example work-flows to do different data
 cleaning operations (e.g., adding metadata, removing false detections,
-creating preliminary abacus plots) for acoustic telemetry data. These
-workflows are meant to be used with telemetry data that doesn’t go
-through [Ocean Tracking Network
+creating preliminary abacus plots) for acoustic telemetry data. The
+first step in these workflows are meant to be used with telemetry data
+that doesn’t go through [Ocean Tracking Network
 (OTN)](https://oceantrackingnetwork.org/) or affiliates (e.g., [Great
 Lakes Acoustic Telemetry Observation System
-(GLATOS)](https://glatos.glos.us/)), QAQC protocols. If one wants to use
-any of the scripts regardless of the data QAQC that has been done,
-select the company your transmitters and receivers are from in the R
-folder and choose what step you are wanting help with.
+(GLATOS)](https://glatos.glos.us/)), QAQC protocols. After step one, the
+scripts can be used with [Ocean Tracking Network
+(OTN)](https://oceantrackingnetwork.org/) or affiliates (e.g., [Great
+Lakes Acoustic Telemetry Observation System
+(GLATOS)](https://glatos.glos.us/)), QAQC data. If one wants to use any
+of the scripts regardless of the where they are at with their telemetry
+data, in the R folder, select the company your transmitters and
+receivers are and choose what step you are wanting help with.
 
 NOTE: Currently Lotek files are under development and are limited in
-functionality. This will be fixed in the coming weeks.
+functionality..
 
 # Installation
 
