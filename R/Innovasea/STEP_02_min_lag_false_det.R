@@ -23,7 +23,11 @@ det <- read_rds(here("saved-data",
 glimpse(det)
 
 
-# ---- RUN min_lag() -----
+
+# ---- run min lag for looop ---- 
+
+
+# ---- RUN min_lag() purrr -----
 # next we need to do a few things to run min_lag, first min_lag needs to be 
 # run for each fish, second we need the mean_delay from those tags as a column
 # prior to running min lag you need to have joined all the metadata for the fish
