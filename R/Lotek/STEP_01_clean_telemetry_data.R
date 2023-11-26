@@ -118,13 +118,19 @@ glimpse(dat)
 min(dat$date_time) #"2022-10-18 10:39:11 UTC"
 max(dat$date_time) #"2023-05-16 09:24:04 UTC"
 # this column is the real day time
+rec_min_max <- dat %>% 
+  group_by(rec_id) %>% 
+  summarise(
+    min_det = min(date_time), 
+    max_det = max(date_time)
+  ) %>% 
+  ungroup()
 
-
-
-#some issues here which we saw earlier when viewing data in WHS Host
-#1500042 died Jan 7th, 1700103 died feb 3rd, 1900020 died march 26
-#1900023 died march 25, 1900040 died march 29, 1900051 died march 30
-#1900058 died march 30, 200052 died feb 27th
+rec_min_max
+# some issues here which we saw earlier when viewing data in WHS Host
+# 1500042 died Jan 7th, 1700103 died feb 3rd, 1900020 died march 26
+# 1900023 died march 25, 1900040 died march 29, 1900051 died march 30
+# 1900058 died march 30, 200052 died feb 27th
 
 # ----- join receiver information with dat ----
 glimpse(rec_data)
