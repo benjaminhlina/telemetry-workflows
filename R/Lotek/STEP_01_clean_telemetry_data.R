@@ -79,8 +79,68 @@ glimpse(dat) # look at data again to see what format everything is in
 dat <- dat %>% 
   mutate(
     date_time_24hr = date_time - 86400
-)
+  )
+
+dat <- dat %>% 
+  dplyr::select(-date_time) %>% 
+  rename(
+    date_time = date_time_24hr, 
+    dec = decimal_id
+  )
+
+# ---- Join metadata of fish ----- 
+# make tag id as a characters 
+
+tag_data$dec <- as.character(tag_data$dec)
+
+
+glimpse(dat)
+glimpse(tag_data)
+
+# join data 
+dat <- dat %>% 
+  left_join(tag_data, by = "dec")
+
+glimpse(dat)
+
+# drop hexadecmial id and rename column 
+
+dat <- dat %>% 
+  dplyr::select(-hexadecimal_id) %>% 
+  rename(
+    release_date = date, 
+    rec_id = id, 
+    fish_notes = notes
+  )
+glimpse(dat)
+
+# check how long recs were listening for
+min(dat$date_time) #"2022-10-18 10:39:11 UTC"
+max(dat$date_time) #"2023-05-16 09:24:04 UTC"
 # this column is the real day time
+
+
+
+#some issues here which we saw earlier when viewing data in WHS Host
+#1500042 died Jan 7th, 1700103 died feb 3rd, 1900020 died march 26
+#1900023 died march 25, 1900040 died march 29, 1900051 died march 30
+#1900058 died march 30, 200052 died feb 27th
+
+# ----- join receiver information with dat ----
+glimpse(rec_data)
+# convert rec_id to character for joining 
+rec_data$rec_id <- as.character(rec_data$rec_id)
+
+
+glimpse(dat)
+glimpse(rec_data)
+
+dat <- dat %>% 
+  left_join(rec_data, by = "rec_id")
+
+
+glimpse(dat)
+# I need to move this section to the min lag portion 
 # Filtering code for 20-second interval rate fish for winter 2022-2023 
 # (spring 2023 downloads)
 # recs were 60 seconds on 60 seconds off
