@@ -18,29 +18,47 @@
   library(janitor)
 }
 # ---- bring in detection data ----
-
-
 # suppper fast load !!! 
-dat <- list.files(path = "./data/Lotek/filtered-csv-from-WSH-host-lotek",
+dat <- list.files(path = "./data/Lotek/WHS Host exports",
                   pattern = "*.csv", 
                   full.names = TRUE) %>% 
   map_df(~read_csv(., col_types = cols(.default = "c"), id = "id")) %>% 
   mutate(
-    id = str_replace(id, "./data/Lotek/filtered-csv-from-WSH-host-lotek/", ""), 
+    id = str_replace(id, "./data/Lotek/WHS Host exports/", ""), 
     id = str_replace(id, ".csv", "")
   ) %>%
   janitor::clean_names()
+glimpse(dat) 
+# ---- import tag metadata ----
+tag_data <- read_csv(here("Data",
+                          "Lotek", 
+                          "Metadata",
+                          "fish_tagging_metadata.csv")) %>% 
+  janitor::clean_names()
+glimpse(tag_data) 
 
-dat
-# ---- view data after import ----
-glimpse(dat) #fraction of a second, power of transmission signal
-
+# ---- Import rec metadata ---- 
+rec_data <- read_csv(here("data", 
+                          "Lotek", 
+                          "Metadata", 
+                          "rec_metadata.csv")) %>% 
+  janitor::clean_names() %>% 
+  rename(
+    rec_id = id,
+    deploy_datetime = deploy_datetime_5, 
+    deploy_time = deploy_datetime_6, 
+    rec_notes = notes
+  )
+glimpse(rec_data)
 # ---- convert dat from raw Julian to posixct ----
-dat<- dat %>% 
+dat <- dat %>% 
   mutate(
     time = as.numeric(time)
   )
-
+# lotek is not actually in utc, it is in whatever computer was in
+# note that although the R believes the date & time  from WHS host is UTC
+# this is not correct. It is in Ottawa (EST) time (confirmed with LOTEK). 
+# Unless 
 dat <- dat %>% 
   mutate(
     time = chron(time, origin = c(month = 1, day = 0, year = 1900),
@@ -48,7 +66,7 @@ dat <- dat %>%
       as.character() %>% 
       str_replace("[(\\)]", "") %>%
       str_replace(".{1}$", "") %>%
-      ymd_hms()
+      ymd_hms(tz = "EST")
   )
 
 names(dat)[names(dat) == "time"] <- "date_time" #rename
