@@ -114,10 +114,12 @@ dat <- dat %>%
   )
 glimpse(dat)
 
+# ---- Start looking at receiver info ----- 
 # check how long recs were listening for
-min(dat$date_time) #"2022-10-18 10:39:11 UTC"
-max(dat$date_time) #"2023-05-16 09:24:04 UTC"
-# this column is the real day time
+min(dat$date_time) # "2022-10-18 10:39:11 EST"
+max(dat$date_time) # "2023-05-16 09:24:04 EST"
+
+# look at when the receivers first were turned on and when they shut off 
 rec_min_max <- dat %>% 
   group_by(rec_id) %>% 
   summarise(
@@ -146,14 +148,9 @@ dat <- dat %>%
 
 
 glimpse(dat)
-# I need to move this section to the min lag portion 
-# Filtering code for 20-second interval rate fish for winter 2022-2023 
-# (spring 2023 downloads)
-# recs were 60 seconds on 60 seconds off
-# 10-minute min_lag filter based on 20-second tag interval rate; 3600-second event filter
 
 # ---- write rds ---- 
 
 write_rds(dat, here("saved-data", 
                     "Lotek-cleaned_telemetry-data", 
-                    "lotek_cleaned_telemetry_file.rds"))
+                    "lotek_telemetry_joined_metadata.rds"))
