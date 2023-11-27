@@ -1,14 +1,9 @@
 # ---- load packages ----
 {
-  library(chron)
-  library(data.table)
   library(dplyr)
   library(here)
   library(lubridate)
-  library(purrr)
   library(readr)
-  library(stringr) 
-  library(tidyr)
 }
 # ---- bring in detection data ----
 
