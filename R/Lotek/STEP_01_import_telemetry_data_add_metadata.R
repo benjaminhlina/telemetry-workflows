@@ -3,19 +3,12 @@
   library(chron)
   library(data.table)
   library(dplyr)
-  library(devtools)
-  library(geosphere)
-  library(glatos)
   library(here)
   library(lubridate)
-  library(plotrix)
   library(purrr)
   library(readr)
-  library(readxl)
   library(stringr) 
   library(tidyr)
-  library(writexl)
-  library(janitor)
 }
 # ---- bring in detection data ----
 # suppper fast load !!! 
