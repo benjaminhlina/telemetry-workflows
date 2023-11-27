@@ -80,6 +80,10 @@ dat <- dat %>%
     date_time = date_time_24hr, 
     dec = decimal_id
   )
+# ---- remove detections that are NA or are not our TAG IDs ---- 
+
+dat <- dat %>% 
+  filter(hexadecimal_id %in% tag_data$hex) 
 
 # ---- Join metadata of fish ----- 
 # make tag id as a characters 
