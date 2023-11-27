@@ -1,10 +1,31 @@
-#Min_LAG filter #### ----
+# ---- load packages ----
+{
+  library(data.table)
+  library(dplyr)
+  library(here)
+  library(lubridate)
+  library(purrr)
+  library(readr)
+  library(stringr) 
+  library(tidyr)
+}
+# ---- bring in detection data ----
+
+dat <- read_rds(here("saved-data", 
+                     "Lotek-cleaned_telemetry-data", 
+                     "lotek_telemetry_joined_metadata.rds"))
+
+glimpse(dat)
+
+
+# ----- Min_LAG filter #### ----
 
 df$min_lag <- as.numeric(NA)
 
-df$time <- as.numeric(df$detection_datetime) #creates a time variable that is raw time (seconds since jan 1 1970)
+df$time <- as.numeric(df$detection_datetime) 
+# creates a time variable that is raw time (seconds since jan 1 1970)
 glimpse(df)
-df <- df[order(df$hex, df$detection_datetime),] #ensure the dataset is sorted properly, first it orders by tag ID and then by date_time 
+df <- df[order(df$hex, df$detection_datetime),] # ensure the dataset is sorted properly, first it orders by tag ID and then by date_time 
 
 # vector of fish IDs
 fish <- sort(unique(df$hex)) #list of fish IDs that the loop is going to go through one at a time
