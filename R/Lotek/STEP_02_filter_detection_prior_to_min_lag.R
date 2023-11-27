@@ -17,6 +17,7 @@ dat <- read_rds(here("saved-data",
                      "lotek_telemetry_joined_metadata.rds"))
 
 glimpse(dat)
+
 # ---- Check if tags were detected BEFORE they were deployed ----
 dat <- dat %>%
   group_by(hex) %>%
