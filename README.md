@@ -14,16 +14,15 @@ that doesn’t go through [Ocean Tracking Network
 (OTN)](https://oceantrackingnetwork.org/) or affiliates (e.g., [Great
 Lakes Acoustic Telemetry Observation System
 (GLATOS)](https://glatos.glos.us/)), QAQC protocols. After step one, the
-scripts can be used with [Ocean Tracking Network
-(OTN)](https://oceantrackingnetwork.org/) or affiliates (e.g., [Great
-Lakes Acoustic Telemetry Observation System
-(GLATOS)](https://glatos.glos.us/)), QAQC data. If one wants to use any
-of the scripts regardless of the where they are at with their telemetry
-data, in the R folder, select the company your transmitters and
-receivers are and choose what step you are wanting help with.
+scripts can be used with [OTN](https://oceantrackingnetwork.org/) or
+affiliates (e.g., [GLATOS](https://glatos.glos.us/)), QAQC data. If one
+wants to use any of the scripts regardless of the where they are at with
+their telemetry data, in the R folder, select the company your
+transmitters and receivers are and choose what step you are wanting help
+with.
 
 NOTE: Currently Lotek files are under development and are limited in
-functionality..
+functionality.
 
 # Installation
 
