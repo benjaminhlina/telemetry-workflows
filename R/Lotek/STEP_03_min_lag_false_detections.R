@@ -15,6 +15,8 @@
               "false_detection_lotek.R"))
   source(here("functions", 
               "make_linestring.R"))
+  source(here("functions", 
+              "speed_filter.R"))
 }
 # ---- bring in detection data ----
 
@@ -27,7 +29,7 @@ glimpse(dat)
 # ---- make station number as a factor -----
 dat <- dat %>% 
   mutate(
-    station = as.factor(station)
+    station = as.character(station)
   ) %>% 
   arrange(hex, date_time)
 glimpse(dat)
@@ -57,8 +59,12 @@ dat <- dat %>%
     detection_timestamp_utc = date_time,
     deploy_lat = rec_lat, 
     deploy_long = rec_long
-  ) 
+  ) %>% 
+  mutate(
+    
+  )
 
+glimpse(dat)
 
 # ----- create detection events filter ----- 
 dtc <- detection_events(dat, 
@@ -66,5 +72,14 @@ dtc <- detection_events(dat,
                         time_sep = 3600 * 1, 
                         condense = TRUE) 
 
-dtc
+glimpse(dtc)
 
+# ---- development of speed filter to come ---- 
+
+dtc_speed <- speed_filter(dets = dtc)
+
+
+glimpse(dtc_speed)
+
+dtc_speed %>% 
+  filter(passed_filter_speed %in% 0)
