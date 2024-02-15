@@ -52,7 +52,7 @@ for (i in 1:length(fish_id)) {
   
   message(paste("Completed min_lag for fish ", i, "out of ", length(fish_id))
   )
-  }
+}
 
 # ---- combine min_lag results list ---- 
 det_f <- bind_rows(min_lag_list)
