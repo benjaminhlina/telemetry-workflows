@@ -62,6 +62,7 @@ dat <- dat %>%
       ymd_hms(tz = "EST")
   )
 
+# dat
 names(dat)[names(dat) == "time"] <- "date_time" #rename
 
 glimpse(dat) # look at data again to see what format everything is in 
