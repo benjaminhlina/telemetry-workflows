@@ -13,10 +13,6 @@
               "min_lag_lotek.R"))
   source(here("functions", 
               "false_detection_lotek.R"))
-  source(here("functions", 
-              "make_linestring.R"))
-  source(here("functions", 
-              "speed_filter.R"))
 }
 # ---- bring in detection data ----
 
@@ -64,22 +60,8 @@ dat <- dat %>%
     
   )
 
-glimpse(dat)
+# ---- save detection data that have been ided for false detections ---- 
 
-# ----- create detection events filter ----- 
-dtc <- detection_events(dat, 
-                        location_col = "station", 
-                        time_sep = 3600 * 1, 
-                        condense = TRUE) 
-
-glimpse(dtc)
-
-# ---- development of speed filter to come ---- 
-
-dtc_speed <- speed_filter(dets = dtc)
-
-
-glimpse(dtc_speed)
-
-dtc_speed %>% 
-  filter(passed_filter_speed %in% 0)
+write_rds(dat, here("saved-data", 
+                     "Lotek-cleaned_telemetry-data", 
+                     "lotek_telemetry_false_detections_ided.rds"))
