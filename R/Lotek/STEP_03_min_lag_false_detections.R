@@ -64,4 +64,4 @@ dat <- dat %>%
 
 write_rds(dat, here("saved-data", 
                      "Lotek-cleaned_telemetry-data", 
-                     "lotek_telemetry_false_detections_ided.rds"))
+                     "false_detection_cleaned_lotek_detections.rds"))
