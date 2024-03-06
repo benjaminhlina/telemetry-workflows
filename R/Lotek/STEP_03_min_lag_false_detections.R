@@ -11,8 +11,8 @@
   library(tidyr)
   source(here("functions", 
               "min_lag_lotek.R"))
-  source(here("functions", 
-              "false_detection_lotek.R"))
+  # source(here("functions", 
+  #             "false_detection_lotek.R"))
 }
 # ---- bring in detection data ----
 
@@ -39,13 +39,11 @@ glimpse(dat)
 
 
 dat <- min_lag_lotek(dat)
-glimpse(dat)
 
 glimpse(dat)
-
 
 # ---- interval filter ---- 
-dat <- false_detections_lotek(dets = dat)
+dat <- false_detections(det = dat, tf = 20 * 30)
 
 
 # ---- rename ---- 
