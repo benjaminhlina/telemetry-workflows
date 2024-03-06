@@ -46,13 +46,16 @@ glimpse(dat)
 # false detections from glatos looks at whether min_lag exceeds the tf value 
 dat_glatos <- false_detections(det = dat, tf = 20 * 30)
 
-# false detection function in from this work flow for lotek uses a binned 
+# false detection function in from this work flow for lotek uses, a binned 
 # alternating interval approach and tag power appraoch. 
 # (e.g., if detections aren't heard within 15-25s, 35-45 s, all the way to 
 # 1200 s, they are false). and If the tag power is less than 10 it flags as 
 # false  
+
 dat_lotek <- false_detections_lotek(det = dat)
 
+# you can decide which one you want to use, for the sake of the tutorial I used
+# the lotek one. 
 
 # ---- rename ---- 
 dat_lotek <- dat_lotek %>% 
@@ -65,7 +68,6 @@ dat_lotek <- dat_lotek %>%
   mutate(
     
   )
-
 # ---- save detection data that have been ided for false detections ---- 
 
 write_rds(dat_lotek, here("saved-data", 
