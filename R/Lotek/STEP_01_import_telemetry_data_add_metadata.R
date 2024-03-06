@@ -150,5 +150,5 @@ glimpse(dat)
 # ---- write rds ---- 
 
 write_rds(dat, here("saved-data", 
-                    "Lotek-cleaned_telemetry-data", 
+                    "Lotek-cleaned-telemetry-data", 
                     "lotek_telemetry_joined_metadata.rds"))

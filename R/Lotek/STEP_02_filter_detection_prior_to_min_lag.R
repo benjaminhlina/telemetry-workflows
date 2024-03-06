@@ -9,7 +9,7 @@
 
 dat <- read_rds(here("saved-data", 
                      "Lotek-cleaned_telemetry-data", 
-                     "lotek_telemetry_joined_metadata.rds"))
+                     "lotek_telemetry-joined_metadata.rds"))
 
 glimpse(dat)
 
@@ -30,5 +30,5 @@ dat <- dat %>%
 # ---- Export out our filtered data ---- 
 
 write_rds(dat, here("saved-data", 
-               "Lotek-cleaned_telemetry-data", 
+               "Lotek-cleaned-telemetry-data", 
                "lotek_telemetry_joined_metadata_filtered.rds"))

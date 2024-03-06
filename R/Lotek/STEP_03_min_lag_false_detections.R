@@ -17,7 +17,7 @@
 # ---- bring in detection data ----
 
 dat <- read_rds(here("saved-data", 
-                     "Lotek-cleaned_telemetry-data", 
+                     "Lotek-cleaned-telemetry-data", 
                      "lotek_telemetry_joined_metadata.rds"))
 
 glimpse(dat)
@@ -63,5 +63,5 @@ dat <- dat %>%
 # ---- save detection data that have been ided for false detections ---- 
 
 write_rds(dat, here("saved-data", 
-                     "Lotek-cleaned_telemetry-data", 
+                     "Lotek-cleaned-telemetry-data", 
                      "lotek_detections_false_detection_cleaned.rds"))
