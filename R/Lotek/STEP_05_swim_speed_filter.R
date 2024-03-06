@@ -18,8 +18,8 @@
 # ---- bring in detection data ----
 
 dat <- read_rds(here("saved-data", 
-                     "Lotek-cleaned_telemetry-data", 
-                     "lotek_telemetry_false_detections_ided.rds"))
+                     "Lotek-cleaned-telemetry-data", 
+                     "lotek_detections_false_detection_cleaned.rds"))
 
 glimpse(dat)
 
