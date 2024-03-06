@@ -33,7 +33,7 @@ dtc <- detection_events(dat,
 glimpse(dtc)
 
 # ---- swim-speed filter to come ---- 
-# use this at your own discrestion as this is under development 
+# use this at your own discrestion as this is under development  
 
 dtc_speed <- speed_filter(dets = dtc)
 
